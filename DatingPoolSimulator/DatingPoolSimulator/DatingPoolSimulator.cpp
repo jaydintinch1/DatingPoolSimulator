@@ -2,6 +2,57 @@
 //
 
 #include <iostream>
+#include <string>
+
+
+using namespace std;
+
+class Person {
+private: 
+  
+   int age;
+   string name; 
+   double weight; 
+   double height;
+   int compatibilityScore;  
+
+
+public: 
+    Person( int age_ , string name_ , double weight_ , double height_ , int compatibilityScore_) :
+    age(age_) , name(name_) , weight(weight_), height(height_) , compatibilityScore(compatibilityScore_)
+    
+    {
+    
+    
+    }
+
+    int GetAge()
+    {
+        return age; 
+    }
+
+    string GetName()
+    {
+       return name; 
+    }
+    
+    double GetWeight()
+    {
+        return weight ; 
+    }
+
+    double GetHeight()
+    {
+      return height; 
+    }
+
+    int GetCompatibilityScore()
+    {
+      return compatibilityScore; 
+    }
+
+
+};
 
 int main()
 {

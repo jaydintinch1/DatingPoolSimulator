@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="DatingPoolSimulator/DatingPoolSimulator.vcxproj" />
+  <Project Path="DatingPoolSimulator/DatingPoolSimulator.vcxproj" Id="85796acf-c5f1-4509-a014-4a0ec21de987" />
 </Solution>
