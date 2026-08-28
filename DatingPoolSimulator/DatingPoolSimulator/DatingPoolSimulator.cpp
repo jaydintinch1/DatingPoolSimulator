@@ -51,14 +51,20 @@ public:
       return compatibilityScore; 
     }
 
+    void SetCompatibilityScore( int compatibilityScore)
+    {
+       this->compatibilityScore = compatibilityScore; 
+    }
 
 };
 
 int main()
 {
    Person person1 (22, "sarah", 45.4, 34.5 , 56);
-    cout <<   person1.GetName() << " is  " <<  person1.GetAge() << "years old";
-     person1.GetCompatibilityScore(40);
+    cout <<   person1.GetName() << " is  " <<  person1.GetAge() << " years old" << endl ;
+     person1.SetCompatibilityScore(40);
+
+     cout << person1.GetCompatibilityScore(); 
 
 }
 
