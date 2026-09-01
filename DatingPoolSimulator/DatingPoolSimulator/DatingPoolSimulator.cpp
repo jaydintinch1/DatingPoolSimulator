@@ -180,24 +180,19 @@ int main()
 
         
          matchCount++;
-        if(matchCount < 0)
-        {
-            cout << "Matches found: " << matchCount << endl << endl;
-            cout << "Name: " << newPerson[i].GetName() << endl << "Age: " << newPerson[i].GetAge() << endl << "Height: " << newPerson[i].GetHeight() << endl << "Compatibility Score : " << newPerson[i].GetCompatibilityScore() << endl;
-        }
-       
-       
-       
-       
+         if (matchCount == 0)
+         {
+             cout << "No matches found." << endl;
+         }
+         else
+         {
+             cout << "Matches found: " << matchCount << endl;
+             cout << "Name: " << newPerson[i].GetName() << endl << "Age: " << newPerson[i].GetAge() << endl << "Height: " << newPerson[i].GetHeight() << endl << "Compatibility Score : " << newPerson[i].GetCompatibilityScore() << endl;
+
+         }  
        
      }
-    
-        else
-        {
-            cout << "No matches found." << endl;
-
-        }
-    
+      
 
      
 }
