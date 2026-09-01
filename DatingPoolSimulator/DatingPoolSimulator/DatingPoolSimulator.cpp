@@ -77,6 +77,13 @@ public:
 
 int main()
 {
+
+int matchCount = 0; 
+int minimumAge; 
+int maximumAge;
+int minimumCompatibility;
+int minimumHeight; 
+
 // Person 1 
    Person person1 (22, "sarah", 45.4, 34.5 , 56);
    cout << "name: " << person1.GetName() << endl << "Age: " << person1.GetAge() << endl << "Height: " << person1.GetHeight() << endl << "Compatibility Score: " << person1.GetCompatibilityScore() << endl;
@@ -87,7 +94,7 @@ int main()
 
 // Person 3 
     Person person3 (30, "lynn", 56.4, 43.45, 30);
-    cout << "name: " << person3.GetName() << endl << "Age: " << person3.GetAge() << endl << "Height: " << person3.GetHeight() << endl << "Compatibility Score: " << person3.GetCompatibilityScore() << endl;
+    cout << "name: " << person3.GetName() << endl << "Age: " << person3.GetAge() << endl << "Height: " << person3.GetHeight() << endl << "Compatibility Score: " << person3.GetCompatibilityScore() << endl << endl;
 
  
      person1.SetCompatibilityScore(40);
@@ -105,14 +112,52 @@ int main()
      newPerson.push_back(person3);
 
 
+     cout << "Enter Minimum Age" << endl;
+     cin >> minimumAge ; 
+
+     cout << "Enter Maximum Age" << endl;
+     cin >> maximumAge;
+
+     while (minimumAge > maximumAge)
+     {
+         cout << "Enter Minimum Age" << endl;
+         cin >> minimumAge;
+
+         cout << "Enter Maximum Age" << endl;
+         cin >> maximumAge;
+     }
+     
+          cout << "Enter Minimum Compatibility" << endl;
+          cin >> minimumCompatibility;
+
+          cout << "Enter Minimum Height" << endl; 
+          cin >> minimumHeight; 
+          
+      
+    
+
+
+
      for (int i = 0; i < newPerson.size(); i++)
      {
-        if (newPerson[i].GetAge() >= 21)
+        if (newPerson[i].GetAge() >= minimumAge && newPerson[i].GetCompatibilityScore() >= minimumCompatibility && newPerson[i].GetAge() <= maximumAge && newPerson[i].GetHeight()>= minimumHeight)
         { 
-       cout << newPerson[i].GetName() << " - " << newPerson[i].GetAge() << "  Compatibility Score: "   << newPerson[i].GetCompatibilityScore() << endl;
+       cout << newPerson[i].GetName() << endl <<"Age: " << newPerson[i].GetAge()<< endl << "Compatibility Score:" << newPerson[i].GetCompatibilityScore() << endl << endl;
+
+        
+        matchCount++;
+       
+
        }
      }
-  
+     if (matchCount == 0)
+     {
+        cout << "No matches found." << endl; 
+     }
+     else
+     { 
+       cout << "Matches found: " <<  matchCount << endl << endl;
+     }
    
     
 
