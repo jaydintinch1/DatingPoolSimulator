@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 
 using namespace std;
@@ -56,15 +57,66 @@ public:
        this->compatibilityScore = compatibilityScore; 
     }
 
+    void SetName(string name)
+    {
+       this->name = name; 
+    }
+
+    void SetAge(int age)
+    {
+        this->age = age;
+    }
+
+    void SetHeight(int height)
+    {
+        this->height = height;
+    }
+
+   
 };
 
 int main()
 {
+// Person 1 
    Person person1 (22, "sarah", 45.4, 34.5 , 56);
-    cout <<   person1.GetName() << " is  " <<  person1.GetAge() << " years old" << endl ;
-     person1.SetCompatibilityScore(40);
+   cout << "name: " << person1.GetName() << endl << "Age: " << person1.GetAge() << endl << "Height: " << person1.GetHeight() << endl << "Compatibility Score: " << person1.GetCompatibilityScore() << endl;
 
-     cout << person1.GetCompatibilityScore(); 
+// Person 2 
+    Person person2 (24, "Johne", 45.6, 44.5, 40);
+    cout << "name: " << person2.GetName() << endl << "Age: " << person2.GetAge() << endl << "Height: " << person2.GetHeight() << endl << "Compatibility Score: " << person2.GetCompatibilityScore() << endl;
+
+// Person 3 
+    Person person3 (30, "lynn", 56.4, 43.45, 30);
+    cout << "name: " << person3.GetName() << endl << "Age: " << person3.GetAge() << endl << "Height: " << person3.GetHeight() << endl << "Compatibility Score: " << person3.GetCompatibilityScore() << endl;
+
+ 
+     person1.SetCompatibilityScore(40);
+     person2.SetAge(30);
+     person2.GetAge(); 
+     
+
+  //   cout << person2.GetAge();
+   
+
+     vector<Person> newPerson; 
+
+     newPerson.push_back(person1); 
+     newPerson.push_back(person2); 
+     newPerson.push_back(person3);
+
+
+     for (int i = 0; i < newPerson.size(); i++)
+     {
+        if (newPerson[i].GetAge() >= 21)
+        { 
+       cout << newPerson[i].GetName() << " - " << newPerson[i].GetAge() << "  Compatibility Score: "   << newPerson[i].GetCompatibilityScore() << endl;
+       }
+     }
+  
+   
+    
+
+     
 
 }
 
