@@ -84,6 +84,40 @@ public:
 
 void FilterStats()
 {
+    cout << "Enter Minimum Age" << endl;
+    cin >> minimumAge;
+
+    cout << "Enter Maximum Age" << endl;
+    cin >> maximumAge;
+
+    while (minimumAge > maximumAge)
+    {
+        cout << "minimum age cannot be greater than maximum age" << endl;
+        cout << "Enter Minimum Age" << endl;
+        cin >> minimumAge;
+
+        cout << "Enter Maximum Age" << endl;
+        cin >> maximumAge;
+    }
+
+    cout << "Enter Minimum Compatibility" << endl;
+    cin >> minimumCompatibility;
+
+    cout << "Enter Minimum Height" << endl;
+    cin >> minimumHeight;
+
+    cout << "Enter Maximum Height" << endl;
+    cin >> maximumHeight;
+
+    while (minimumHeight > maximumHeight)
+    {
+        cout << "minimum height cannot be greater than maximum hieght" << endl;
+        cout << "Enter Minimum Height" << endl;
+        cin >> minimumHeight;
+
+        cout << "Enter Maximum Height" << endl;
+        cin >> maximumHeight;
+    }
 
 
 }
@@ -122,44 +156,10 @@ int main()
      newPerson.push_back(person3);
 
 
-     cout << "Enter Minimum Age" << endl;
-     cin >> minimumAge ; 
 
-     cout << "Enter Maximum Age" << endl;
-     cin >> maximumAge;
-
-     while (minimumAge > maximumAge)
-     {
-         cout << "minimum age cannot be greater than maximum age" << endl;
-         cout << "Enter Minimum Age" << endl;
-         cin >> minimumAge;
-
-         cout << "Enter Maximum Age" << endl;
-         cin >> maximumAge;
-     }
-     
-          cout << "Enter Minimum Compatibility" << endl;
-          cin >> minimumCompatibility;
-
-          cout << "Enter Minimum Height" << endl; 
-          cin >> minimumHeight; 
-
-          cout << "Enter Maximum Height" << endl; 
-          cin >> maximumHeight; 
-
-          while (minimumHeight > maximumHeight)
-          {
-              cout << "minimum height cannot be greater than maximum hieght" << endl; 
-              cout << "Enter Minimum Height" << endl;
-              cin >> minimumHeight;
-
-              cout << "Enter Maximum Height" << endl;
-              cin >> maximumHeight;
-          }
-          
+     FilterStats(); 
       
-    
-
+   
 
 
      for (int i = 0; i < newPerson.size(); i++)
