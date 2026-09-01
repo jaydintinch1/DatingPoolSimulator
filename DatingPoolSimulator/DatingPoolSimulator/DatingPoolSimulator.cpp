@@ -140,6 +140,14 @@ int main()
     Person person3 (30, "lynn", 56.4, 43.45, 30);
     cout << "name: " << person3.GetName() << endl << "Age: " << person3.GetAge() << endl << "Height: " << person3.GetHeight() << endl << "Compatibility Score: " << person3.GetCompatibilityScore() << endl << endl;
 
+    // Person 4
+    Person person4(40, "Beck", 50.43, 60, 66);
+    cout << "name: " << person4.GetName() << endl << "Age: " << person4.GetAge() << endl << "Height: " << person4.GetHeight() << endl << "Compatibility Score: " << person4.GetCompatibilityScore() << endl << endl;
+
+    // Person 5
+    Person person5(21, "Marie", 70, 32.45, 10);
+    cout << "name: " << person5.GetName() << endl << "Age: " << person5.GetAge() << endl << "Height: " << person5.GetHeight() << endl << "Compatibility Score: " << person5.GetCompatibilityScore() << endl << endl;
+
  
      person1.SetCompatibilityScore(40);
      person2.SetAge(30);
@@ -154,6 +162,8 @@ int main()
      newPerson.push_back(person1); 
      newPerson.push_back(person2); 
      newPerson.push_back(person3);
+     newPerson.push_back(person4); 
+     newPerson.push_back(person5); 
 
 
 
